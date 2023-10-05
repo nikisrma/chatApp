@@ -62,4 +62,51 @@
       height: 100vh;
     }
   }
+
+  /* Add custom CSS for responsiveness */
+@media (max-width: 767px) {
+    .search {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-icon {
+        width: 50px;
+    }
+
+    .chat-container {
+        height: 60vh;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .search {
+        width: 70%;
+        margin-bottom: 10px;
+    }
+
+    .search-icon {
+        width: 30%;
+    }
+
+    .chat-container {
+        height: 70vh;
+    }
+}
+
+@media (min-width: 992px) {
+    .search {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    .search-icon {
+        width: 20%;
+    }
+
+    .chat-container {
+        height: 80vh;
+    }
+}
+
   
