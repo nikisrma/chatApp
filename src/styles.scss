@@ -1,1 +1,168 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+// MDB SCSS
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.form-control{
+    border:1px solid #bdbdbd !important;
+}
+
+.bg-image{
+    background-color: #CDC4F9;
+}
+.search{
+    border-right: none !important;
+}
+.search-icon{
+    border: 1px solid #0f0fe9d6 !important;
+    background-color: #0f0fe9d6 !important;
+    color: white !important;
+}
+.bg-image {
+  animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.card {
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+.form-control {
+  transition: all 0.3s ease;
+}
+
+.btn-success {
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+  transform: scale(1.05);
+}
+.text-body a {
+  transition: color 0.3s ease;
+}
+
+.text-body a:hover {
+  color: #28a745; /* Change to your desired color */
+}
+
+
+.custom-container{
+  margin: unset !important;
+}
+.vh-100 {
+  height: 100vh; /* Set the section height to 100% of viewport height */
+  overflow: hidden; /* Hide any content that overflows the section */
+}
+
+.chat-container {
+  height: 750px; /* Set a fixed height for the chat container */
+  overflow-y: auto; /* Add vertical scrollbar if content overflows */
+  padding: 15px; /* Add padding to the chat container */
+}
+
+
+.input-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f5f6f7;
+  padding: 10px 15px;
+  margin-top: 15px; /* Set margin-top to create space between chat container and input bar */
+}
+
+.input-bar input[type="text"] {
+  flex: 1; /* Make the input field take up remaining space */
+  height: 36px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+/* Optionally, you can style the send button and other icons */
+.input-bar button, .input-bar a {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Optionally, you can style the scrollbar */
+.chat-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+  background-color: #f5f6f7;
+}
+
+/* Custom CSS for responsiveness */
+@media (max-width: 768px) {
+  .vh-100 {
+      height: auto; /* Remove fixed height for smaller screens */
+  }
+  
+  .chat-container {
+      max-height: 400px; /* Limit the height of the chat container on smaller screens */
+  }
+  
+  .input-bar {
+      flex-direction: column; /* Stack input elements vertically on smaller screens */
+      margin-top: 10px; /* Adjust margin-top for spacing */
+  }
+  
+  .input-bar input[type="text"] {
+      width: 100%; /* Make the input field take up full width */
+      margin-bottom: 10px; /* Add spacing between input field and icons */
+  }
+}
+
+.btn-success{
+ background: #CDC4F9;
+}
+
+/* Default styles for chat-container */
+.chat-container {
+  overflow-y: auto; /* Add vertical scrollbar if content overflows */
+  padding: 15px; /* Add padding to the chat container */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .chat-container {
+    height: 500px; /* Set a fixed height for smaller screens */
+  }
+}
+
+/* Media query for medium-sized screens */
+@media (min-width: 769px) and (max-width: 992px) {
+  .chat-container {
+    height: 600px; /* Set a fixed height for medium-sized screens */
+  }
+}
+
+/* Media query for larger screens */
+@media (min-width: 993px) {
+  .chat-container {
+    height: 750px; /* Set a fixed height for larger screens */
+  }
+}

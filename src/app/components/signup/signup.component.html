@@ -1,0 +1,77 @@
+<section class="vh-100 bg-image">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+              <form  [formGroup]="registerForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="name">Your Name</label>
+                  <input type="text" id="name" class="form-control form-control-lg" formControlName="name"/>
+                  <div *ngIf="registerForm.get('name')?.hasError('required') && registerForm.get('name')?.touched" class="text-danger">
+                    Name is required.
+                  </div>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="email">Your Email</label>
+                  <input type="email" id="email" class="form-control form-control-lg" formControlName="email" />
+                  <div *ngIf="registerForm.get('email')?.hasError('required') && registerForm.get('email')?.touched" class="text-danger">
+                    Email is required.
+                  </div>
+                  <div *ngIf="registerForm.get('email')?.hasError('email') && registerForm.get('email')?.touched" class="text-danger">
+                    Please enter a valid email address.
+                  </div>
+                </div>
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="image">Your Profile Image (Image files only)</label>
+                  <input type="file" id="image" class="form-control form-control-lg" formControlName="profileImage" 
+                  accept="image/*" (change)="onFileChange($event)"/>
+                  <div *ngIf="registerForm.get('profileImage')?.hasError('required') && registerForm.get('profileImage')?.touched" class="text-danger">
+                    Profile Image is required.
+                  </div>
+                  <div *ngIf="registerForm.get('profileImage')?.hasError('fileTypeInvalid')" class="text-danger">
+                    Invalid file type. Please choose an image.
+                  </div>
+                  <div *ngIf="registerForm.get('profileImage')?.hasError('fileSizeInvalid')" class="text-danger">
+                    File size exceeds the maximum limit.
+                  </div>
+                </div>
+              
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="password">Password</label>
+                  <input type="password" id="password" class="form-control form-control-lg" formControlName="password" />
+                  <div *ngIf="registerForm.get('password')?.hasError('required') && registerForm.get('password')?.touched" class="text-danger">
+                    Password is required.
+                  </div>
+                </div>
+              
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="confirmPassword">Repeat your password</label>
+                  <input type="password" id="confirmPassword" class="form-control form-control-lg" formControlName="confirmPassword" />
+                  <div *ngIf="registerForm.get('confirmPassword')?.hasError('required') && registerForm.get('confirmPassword')?.touched" class="text-danger">
+                    Confirm Password is required.
+                  </div>
+                  <div *ngIf="registerForm.hasError('passwordMismatch')" class="text-danger">
+                    Passwords do not match.
+                  </div>
+                </div>
+              
+                <div class="d-flex justify-content-center">
+                  <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" [disabled]="registerForm.invalid">Register</button>
+                </div>
+              
+                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="/" class="fw-bold text-body"><u>Login here</u></a></p>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
