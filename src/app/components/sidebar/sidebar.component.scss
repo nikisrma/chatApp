@@ -1,23 +1,23 @@
 /* Chat Container (Sidebar) */
-.chat-container {
+.chat-list-container {
     height: calc(100vh - 80px); /* Set the height of the sidebar, adjust as needed */
     overflow-y: auto; /* Enable vertical scrollbar if content overflows */
     padding: 20px;
   }
   
   /* Chat List Items */
-  .chat-container ul {
+  .chat-list-container ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
   
-  .chat-container li {
+  .chat-list-container li {
     padding: 10px 0;
     border-bottom: 1px solid #ccc; /* Add a border between chat items */
   }
   
-  .chat-container a {
+  .chat-list-container a {
     color: #333;
     text-decoration: none;
     display: flex;
@@ -25,7 +25,7 @@
   }
   
   /* Avatar Styling */
-  .chat-container img {
+  .chat-list-container img {
     border-radius: 50%; /* Round avatars */
     margin-right: 15px;
   }
@@ -37,7 +37,7 @@
   }
   
   /* Hover Effect */
-  .chat-container li:hover {
+  .chat-list-container li:hover {
     background-color: #f8f9fa; /* Light gray background on hover */
     cursor: pointer;
   }
@@ -58,53 +58,26 @@
   
   /* Responsive Styling (Adjust as needed) */
   @media (max-width: 768px) {
-    .chat-container {
+    .chat-list-container {
       height: 100vh;
     }
   }
 
   /* Add custom CSS for responsiveness */
 @media (max-width: 767px) {
-    .search {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .search-icon {
-        width: 50px;
-    }
-
-    .chat-container {
+    .chat-list-container {
         height: 60vh;
     }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .search {
-        width: 70%;
-        margin-bottom: 10px;
-    }
-
-    .search-icon {
-        width: 30%;
-    }
-
-    .chat-container {
+    .chat-list-container {
         height: 70vh;
     }
 }
 
 @media (min-width: 992px) {
-    .search {
-        width: 50%;
-        margin-bottom: 10px;
-    }
-
-    .search-icon {
-        width: 20%;
-    }
-
-    .chat-container {
+    .chat-list-container {
         height: 80vh;
     }
 }

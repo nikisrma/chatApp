@@ -7,7 +7,6 @@ import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ChatsComponent } from './components/chats/chats.component';
-import { MembersListComponent } from './components/members-list/members-list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -20,7 +19,6 @@ import { NewchatComponent } from './components/newchat/newchat.component';
     SignupComponent,
     LoginComponent,
     ChatsComponent,
-    MembersListComponent,
     SidebarComponent,
     HeaderComponent,
     NewchatComponent
